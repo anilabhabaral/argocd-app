@@ -6,5 +6,5 @@
 
 The directory needs to mentioned in ArgoCD application:
 ```
-yaml/
+yamls/
 ```
