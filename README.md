@@ -13,3 +13,19 @@ yamls/
 ```
 helloworld-helm-chart
 ```
+
+- ArgoCD application yaml file:
+```
+project: default
+source:
+  repoURL: 'https://github.com/anilabhabaral/argocd-app.git'
+  path: helloworld-helm-chart
+  targetRevision: HEAD
+destination:
+  server: 'https://kubernetes.default.svc'
+  namespace: test-helm-abaral
+syncPolicy:
+  automated:
+    prune: true
+    selfHeal: true
+```
