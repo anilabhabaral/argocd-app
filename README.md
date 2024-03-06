@@ -8,3 +8,8 @@ The directory needs to mentioned in ArgoCD application:
 ```
 yamls/
 ```
+
+For Helm chart use this directory in ArgoCD application:
+```
+helloworld-helm-chart
+```
