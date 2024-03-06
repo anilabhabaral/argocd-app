@@ -7,9 +7,9 @@ metadata:
     app.kubernetes.io/managed-by: Helm
   name: jboss-helloworld-service
 spec:
-  host: jboss-helloworld-service-test-helm-abaral.apps.cndsno3.cee.ral3.lab.eng.rdu2.redhat.com
+  host: {{ .Values.route.host }}
   port:
-    targetPort: 8080
+    targetPort: {{ .Values.route.targetPort }}
   to:
     kind: Service
     name: jboss-helloworld-service
