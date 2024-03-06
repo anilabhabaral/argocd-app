@@ -1,4 +1,4 @@
-# ArgoCD Application manifest files
+## For raw yaml manifest like deployment, service and route
 
 1. deployment.yaml
 2. route.yaml
@@ -8,13 +8,29 @@
 ```
 yamls/
 ```
+- ArgoCD application:
+```
+project: default
+source:
+  repoURL: 'https://github.com/anilabhabaral/argocd-app.git'
+  path: yamls
+  targetRevision: HEAD
+destination:
+  server: 'https://kubernetes.default.svc'
+  namespace: test-helm-abaral
+syncPolicy:
+  automated:
+    prune: true
+    selfHeal: true
+```
 
+## Helm Chart
 - For Helm chart use this directory in ArgoCD application:
 ```
 helloworld-helm-chart
 ```
 
-- ArgoCD application yaml file:
+- ArgoCD application:
 ```
 project: default
 source:
