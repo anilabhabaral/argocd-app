@@ -8,6 +8,7 @@ metadata:
   name: jboss-helloworld-service
 spec:
   host: {{ .Values.route.host }}
+  path: "/helloworld"
   port:
     targetPort: {{ .Values.route.targetPort }}
   to:
