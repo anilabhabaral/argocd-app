@@ -5,6 +5,7 @@
 chmod 755 argocd-install.sh
 ./argocd-install.sh
   ```
+- To install argocd using OpenShift GitOps Operator in OpenShift follow link: https://github.com/anilabhabaral/hello-cicd-argocd-jboss?tab=readme-ov-file#argocdcd
 
 ## For raw yaml manifest like deployment, service and route
 
