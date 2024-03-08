@@ -1,3 +1,11 @@
+## ArgoCD installation
+- To install argocd in k8s cluster follow this doc: https://argo-cd.readthedocs.io/en/stable/getting_started/
+- This process can be automated by this script `argocd-install.sh`
+ ```
+chmod 755 argocd-install.sh
+./argocd-install.sh
+  ```
+
 ## For raw yaml manifest like deployment, service and route
 
 1. deployment.yaml
