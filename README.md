@@ -1,6 +1,6 @@
 ## ArgoCD installation
-- To install argocd in k8s cluster follow this doc: https://argo-cd.readthedocs.io/en/stable/getting_started/
-- This process can be automated by this script `argocd-install.sh`
+- To install argocd in loacal k8s cluster(like K3D, minikube, kind etc) follow this doc: https://argo-cd.readthedocs.io/en/stable/getting_started/
+- This installation process can be automated by this script `argocd-install.sh`. To run the script follow the below commands
 ```
 wget https://raw.githubusercontent.com/anilabhabaral/argocd-app/main/argocd-install.sh
 chmod 755 argocd-install.sh
