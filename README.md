@@ -1,8 +1,12 @@
 ## ArgoCD installation
 - To install argocd in k8s cluster follow this doc: https://argo-cd.readthedocs.io/en/stable/getting_started/
 - This process can be automated by this script `argocd-install.sh`
- ```
+```
+wget https://raw.githubusercontent.com/anilabhabaral/argocd-app/main/argocd-install.sh
 chmod 755 argocd-install.sh
+```
+  
+ ```
 ./argocd-install.sh
   ```
 - To install argocd using OpenShift GitOps Operator in OpenShift follow link: https://github.com/anilabhabaral/hello-cicd-argocd-jboss?tab=readme-ov-file#argocdcd
