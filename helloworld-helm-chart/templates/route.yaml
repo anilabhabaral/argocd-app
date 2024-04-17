@@ -3,7 +3,6 @@ kind: Route
 metadata:
   name: jboss-helloworld-route
 spec:
-  host: {{ .Values.route.host }}
   path: {{ .Values.route.path }}
   port:
     targetPort: {{ .Values.route.targetPort }}
