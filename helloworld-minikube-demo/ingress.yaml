@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: jboss-helloworld-ingress
+spec:
+  rules:
+  - host: "foo.bar.com"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/helloworld"
+        backend:
+          service:
+            name: jboss-helloworld-service
+            port:
+              number: 8080
