@@ -4,7 +4,7 @@ metadata:
   name: jboss-helloworld-ingress
 spec:
   rules:
-  - host: "foo.bar.com"
+  - host: "argo.url.com"
     http:
       paths:
       - pathType: Prefix
