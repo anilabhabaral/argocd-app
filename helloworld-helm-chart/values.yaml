@@ -5,7 +5,6 @@
 replicaCount: 2
 
 route:
-  host: jboss-helloworld-service-test-helm-abaral.apps.cndsno3.cee.ral3.lab.eng.rdu2.redhat.com
   targetPort: 8080
   path: "/helloworld"
 
