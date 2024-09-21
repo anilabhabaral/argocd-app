@@ -1,3 +1,5 @@
 resources:
 - app-1.yaml
 - app-2.yaml
+- ns-app1.yaml
+- ns-app2.yaml
