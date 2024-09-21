@@ -26,3 +26,7 @@ spec:
       prune: false
       selfHeal: false
 ```
+Create the Argocd application for app of apps:
+```
+oc apply -f https://raw.githubusercontent.com/anilabhabaral/argocd-app/refs/heads/main/app-of-apps/application/app.yaml -n openshift-gitops
+```
