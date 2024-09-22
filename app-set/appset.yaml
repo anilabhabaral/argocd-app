@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: appset-test
+  namespace: openshift-gitops
+spec:
+  goTemplate: true
+  goTemplateOptions: ["missingkey=error"]
+  generators:
+  - git:
+      repoURL: https://github.com/anilabhabaral/argocd-app.git
+      revision: HEAD
+      directories:
+      - path: yamls
+      - path: go-app
+  template:
+    metadata:
+      name: '{{.path.basename}}-app'
+    spec:
+      project: "default"
+      source:
+        repoURL: https://github.com/anilabhabaral/argocd-app.git
+        targetRevision: HEAD
+        path: '{{.path.path}}'
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: '{{.path.basename}}-app'
+      syncPolicy:
+        automated: {}
