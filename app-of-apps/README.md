@@ -12,19 +12,14 @@ metadata:
   name: test-app-of-apps
 spec:
   destination:
-    name: ''
-    namespace: ''
     server: https://kubernetes.default.svc
+  project: default
   source:
     path: app-of-apps
     repoURL: https://github.com/anilabhabaral/argocd-app/
     targetRevision: HEAD
-  sources: []
-  project: default
   syncPolicy:
-    automated:
-      prune: false
-      selfHeal: false
+    automated: {}
 ```
 Create the Argocd application for app of apps:
 ```
